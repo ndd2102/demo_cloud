@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from 'react';
+import ChangeTabs from './ChangeTabs';
+import FileUpload from './FileUpload';
+import GetFlie from './GetFile';
+import FormInput from './FormInput';
 function App() {
+  const tabs = [
+    {
+      label: 'Nav1',
+      content: <FileUpload></FileUpload>,
+    },
+    {
+      label: 'Nav2',
+      content: <GetFlie></GetFlie>,
+    },
+    {
+      label: 'Nav3',
+      content: <FormInput></FormInput>,
+    },
+    
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ChangeTabs tabs={tabs} defaultActiveTab={0} />
     </div>
   );
 }

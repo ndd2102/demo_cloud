@@ -1,0 +1,35 @@
+.vertical-tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.vertical-tabs-menu {
+  display: flex;
+  flex-direction: column;
+  width: 50vh;
+  background-color: #ccc;
+  height: 100vh;
+  font-size: 400%;
+}
+
+.vertical-tabs-menu div {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.vertical-tabs-menu div.active {
+  background-color:gray;
+}
+
+.vertical-tabs-content {
+  width: calc(100% - 120px);
+}
+
+.hidden {
+  display: none;
+}
+
+.active {
+  display: block;
+}
